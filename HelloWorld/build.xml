@@ -6,7 +6,7 @@
 
     <target name="compile">
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes" includeantruntime="false"/>
+        <javac srcdir="src" destdir="build/classes" includeantruntime="true"/>
     </target>
 
     <target name="jar">
@@ -32,7 +32,7 @@
 		    </classpath>
 
 		    <test name="test.HelloWorldTest"
-		             haltonfailure="no" outfile="result">
+		             haltonfailure="no" outfile="/test-reports/result.xml">
 
 		      <formatter type="plain"/>
 		      <formatter type="xml"/>
