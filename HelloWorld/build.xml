@@ -1,12 +1,18 @@
 <project>
 
+	<property name="lib.dir" value="lib" />
+	
+	<path id="classpath">
+	    <fileset dir="${lib.dir}" includes="**/*.jar" />
+	</path>
+	
     <target name="clean">
         <delete dir="build"/>
     </target>
 
-    <target name="compile">
+    <target name="compile" >
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes" includeantruntime="true"/>
+        <javac srcdir="src" destdir="build/classes" classpathref="classpath" includeantruntime="false"/>
     </target>
 
     <target name="jar">
@@ -29,7 +35,8 @@
 		      <pathelement location="${project.class.path}"/>
 		      <pathelement location="${build.tests}"/>
 		      <pathelement path="${java.class.path}"/>
-		      <pathelement path="build/classes"/>
+		    	<pathelement path="build/classes/"/>
+		      <path refid="classpath" />
 		    </classpath>
 
 		    <test name="tests.HelloWorldTest"
