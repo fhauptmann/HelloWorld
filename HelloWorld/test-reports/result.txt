@@ -1,0 +1,9 @@
+Testsuite: tests.HelloWorldTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0,03 sec
+------------- Standard Output ---------------
+Hello myName!
+------------- ---------------- ---------------
+
+Testcase: testSayHello took 0 sec
+Testcase: testGetName took 0 sec
+Testcase: testSetName took 0 sec

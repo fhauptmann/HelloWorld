@@ -29,10 +29,11 @@
 		      <pathelement location="${project.class.path}"/>
 		      <pathelement location="${build.tests}"/>
 		      <pathelement path="${java.class.path}"/>
+		      <pathelement path="build/classes"/>
 		    </classpath>
 
-		    <test name="test.HelloWorldTest"
-		             haltonfailure="no" outfile="/test-reports/result.xml">
+		    <test name="tests.HelloWorldTest"
+		             haltonfailure="no" outfile="/test-reports/result">
 
 		      <formatter type="plain"/>
 		      <formatter type="xml"/>
