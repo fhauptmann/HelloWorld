@@ -18,7 +18,7 @@ public class HelloWorldTest extends HelloWorld {
 	@Test
 	public void testSetName() {
 		HelloWorld hello = new HelloWorld();
-		hello.setName("asdf");
+		hello.setName("myName");
 		assertEquals("myName", hello.getName());
 	}
 
