@@ -21,5 +21,25 @@
     <target name="run">
         <java jar="build/jar/HelloWorld.jar" fork="true"/>
     </target>
+	
+	<target name="test">
+		<junit printsummary="yes" haltonfailure="yes">
+
+		    <classpath>
+		      <pathelement location="${project.class.path}"/>
+		      <pathelement location="${build.tests}"/>
+		      <pathelement path="${java.class.path}"/>
+		    </classpath>
+
+		    <test name="test.HelloWorldTest"
+		             haltonfailure="no" outfile="result">
+
+		      <formatter type="plain"/>
+		      <formatter type="xml"/>
+
+		    </test>
+
+		  </junit>
+	</target>
 
 </project>
